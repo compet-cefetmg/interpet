@@ -1,0 +1,231 @@
+{% extends "interpet/base.html" %}
+{% block content %}
+
+<header>
+	{% include "interpet/navbar.html" %}
+</header>
+
+<div class="container">
+	<div class="row title page-header">
+		<h2 class="form-title">Formulário de Inscrição (petiano)</h2>
+		<small>
+			Deseja participar como ouvinte?
+			<a href="/interpet/inscricao-ouvinte">
+				Inscreva-se aqui
+			</a>
+		</small>
+	</div>
+
+	<form method="post" role="form" action="/interpet/inscricao/">
+		{% csrf_token %}
+		<div class="col-md-6">
+			<div class="form-group">
+				<label class="control-label">Nome</label>
+				<input class="form-control" type="text" name="Q1" required>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Idade</label>
+				<input class="form-control" type="number" name="Q2" >
+			</div>
+			<div class="form-group">
+				<label class="control-label">Egresso de escola...</label>
+				<div class="radio">
+	  				<label><input type="radio" value="Pública" name="Q3" >Pública</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" value="Privada" name="Q3">Privada</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Já participou de outros projetos acadêmicos, em qualquer nível de educação (fundamental, médio, superior)?</label>
+				<div class="checkbox">
+	  				<label><input type="checkbox" name="Q4" value="Monitoria">Monitoria</label>
+				</div>
+				<div class="checkbox">
+	  				<label><input type="checkbox" name="Q4" value="Projetos de Iniciação Científica">Projetos de Iniciação Científica</label>
+				</div>
+				<div class="checkbox">
+	  				<label><input type="checkbox" name="Q4" value="Projetos de extensão comunitária">Projetos de extensão comunitária</label>
+				</div>
+				<div class="checkbox">
+	  				<label><input type="checkbox" name="Q4" value="Olimpíadas de conhecimento">Olimpíadas de conhecimento</label>
+				</div>
+				<div class="checkbox">
+	  				<label><input type="checkbox" name="Q4" value="Estágio">Estágio</label>
+				</div>
+				<div class="checkbox">
+	  				<label><input type="checkbox" name="Q4" value="Outro" id="other">Outro</label>
+				</div>
+				<div id="specify">
+					<label class="control-label">Especifique:</label>
+					<input class="form-control" type="text" name="Q5" value="">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Participa do grupo PET do curso de...</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q6"  value="Administração/Campus II">Administração/Campus II</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q6" value="Engenharia Ambiental e Sanitária/Campus I">Engenharia Ambiental e Sanitária/Campus I</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q6" value="Engenharia Civil/Curvelo">Engenharia Civil/Curvelo</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q6" value="Engenharia de Automoção Industrial/Araxá">Engenharia de Automoção Industrial/Araxá</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q6" value="Engenharia de Computação/Campus II">Engenharia de Computação/Campus II</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q6" value="Engenharia de Controle e Automação/Leopoldina">Engenharia de Controle e Automação/Leopoldina</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q6" value="Engenharia de Materiais/Campus I">Engenharia de Materiais/Campus I</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q6" value="Engenharia de Minas/Araxá">Engenharia de Minas/Araxá</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q6" value="Engenharia Mecatrônica/Divinópolis">Engenharia Mecatrônica/Divinópolis</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Está vinculado ao programa como...</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q7"  value="Bolsista">Bolsista</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q7" value="Voluntário">Voluntário</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Por que ingressou no PET?</label>
+				<textarea class="form-control" name="Q8" ></textarea>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Qual é sua carga horária diária com o PET?</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q9"  value="Menos de 2 horas">Menos de 2 horas</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q9" value="Entre 2 e 3 horas">Entre 2 e 3 horas</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q9" value="Entre 3 e 4 horas">Entre 3 e 4 horas</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q9" value="Mais de 4 horas">Mais de 4 horas</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Onde desenvolve a maior parte das atividades do PET?</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q10"  value="Campo">Campo</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q10" value="Casa">Casa</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q10" value="CEFET-MG">CEFET-MG</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Qual é a sua rotina semanal de contato com seu tutor?</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q11"  value="Até 2 vezes">Até 2 vezes</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q11" value="Entre 3 e 5 vezes">Entre 3 e 5 vezes</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q11" value="Acima de 5 vezes">Acima de 5 vezes</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Qual é o meio mais utilizado para o contato com seu tutor?</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q12"  value="E-mail">E-mail</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q12" value="Presencial">Presencial</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q12" value="Rede social">Rede social</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q12" value="Telefone">Telefone</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q12" value="Outro">Outro</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">O valor da bolsa é adequado?</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q13"  value="Sim">Sim</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q13" value="Não">Não</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">O recebimento da bolsa colabora para a sua permanência no CEFET-MG?</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q14"  value="Sim">Sim</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q14" value="Não">Não</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Das atividades desenvolvidas pelo grupo PET que você participa, com quais delas que você mais se identifica?</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q15"  value="Ensino">Ensino</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q15" value="Pesquisa">Pesquisa</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q15" value="Extensão">Extensão</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q15" value="Todas citadas">Todas citadas</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Para cada interface do PET, cite uma atividade desenvolvida pelo grupo que você participa:</label>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Ensino</label>
+				<textarea class="form-control" name="Q16" ></textarea>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Pesquisa</label>
+				<textarea class="form-control" name="Q17" ></textarea>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Extensão</label>
+				<textarea class="form-control" name="Q18" ></textarea>
+			</div>
+			<div class="form-group">
+				<label class="control-label">De que forma o PET pode colaborar para o mundo do trabalho e para a formação acadêmica?</label>
+				<textarea class="form-control" name="Q19" ></textarea>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Você pretende seguir carreira acadêmica?</label>
+				<div class="radio">
+	  				<label><input type="radio" name="Q20"  value="Sim">Sim</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" name="Q20" value="Não">Não</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Enviar">
+			</div>
+		</div>
+	</form>	
+</div>
+{% endblock %}

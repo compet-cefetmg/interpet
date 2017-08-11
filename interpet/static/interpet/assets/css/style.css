@@ -1,0 +1,88 @@
+body {
+    font-family: 'Open Sans', 'Helvetica';
+    color: #66595c;
+}
+
+nav .navbar-brand {
+    margin-top: -5px;
+}
+
+.pets img {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.title h2 {
+    font-family: 'Open Sans'; 
+    font-weight: 300;
+    color: rgb(0, 41, 90);
+    text-align: center;   
+}
+
+.container h4 {
+    text-align: center;
+}
+
+.header {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #66595c;
+    font-weight: 300;
+}
+
+form .form-group {
+    margin-top: 30px;
+}
+
+form .form-group textarea {
+    height: 100px;
+}
+
+form .form-control[type=number] {
+    max-width: 70px;
+}
+
+form .form-control[type=text] {
+    max-width: 350px;
+}
+
+#specify {
+    display: none;
+}
+
+.form-title {
+    margin-top: 25px;
+}
+
+.container .row.title.page-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul li:hover {
+    background-color: rgb(225, 225, 225) !important;
+}
+
+
+.datatables td.details-control {
+    background: url('/static/assets/img/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+.datatables tr.shown td.details-control {
+    background: url('/static/assets/img//details_close.png') no-repeat center center;
+}
+
+.sobre-content{
+    text-align: justify;
+}
+
+.sobre-content h1{
+    text-align: center;
+}

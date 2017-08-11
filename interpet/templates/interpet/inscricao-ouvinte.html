@@ -1,0 +1,53 @@
+{% extends "interpet/base.html" %}
+{% block content %}
+
+<header>
+	{% include "interpet/navbar.html" %}
+</header>
+
+<div class="container">
+	<div class="row title page-header">
+		<h2 class="form-title">Formulário de Inscrição (ouvinte)</h2>
+		<small>
+			Petiano?
+			<a href="/interpet/inscricao">
+				Inscreva-se aqui
+			</a>
+		</small>
+	</div>
+
+	<form method="post" role="form" action="/interpet/inscricao/">
+		{% csrf_token %}
+		<div class="col-md-6">
+			<div class="form-group">
+				<label class="control-label">Nome</label>
+				<input class="form-control" type="text" name="Q1" required>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Situação acadêmica</label>
+				<div class="radio">
+	  				<label><input type="radio" value="Professor" name="Q21">Professor</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" value="Aluno" name="Q21">Aluno</label>
+				</div>
+				<div class="radio">
+	  				<label><input type="radio" value="Outra" name="Q21">Outra</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Curso que atua</label>
+				<input class="form-control" type="text" name="Q22">
+			</div>
+			<div class="form-group">
+				<label class="control-label">Instituição de origem</label>
+				<input class="form-control" type="text" name="Q23">
+			</div>
+			<input type="hidden" name="ouvinte" value="True">
+			<div class="form-group">
+				<input type="submit" class="btn btn-primary" value="Enviar">
+			</div>
+		</div>
+	</form>	
+</div>
+{% endblock content %}
