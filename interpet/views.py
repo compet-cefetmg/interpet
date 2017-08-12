@@ -2,6 +2,9 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import *
 from django.core import serializers
+from django.contrib.auth import login as login_user
+from django.contrib.auth import logout as logout_user
+from django.contrib.auth import authenticate
 
 # Create your views here.
 
@@ -59,3 +62,23 @@ def sobre(request):
 
 def inscricao_ouvinte(request):
 	return render(request, 'interpet/inscricao-ouvinte.html')
+
+def logout(request):
+	logout_user(request)
+	return redirect('/')
+
+def login(request):
+	context = {}
+
+	if request.method == 'POST':
+		username = request.POST['username']
+		password = request.POST['password']
+		user = authenticate(username=username, password=password)
+		if user:
+			login_user(request, user)
+			return redirect(request.POST.get('next'))
+		else:
+			context['error'] = "Usuário ou senha inválidos."
+			context['username'] = username
+
+	return render(request, 'interpet/login.html', context)
