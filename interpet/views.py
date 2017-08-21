@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import *
 from django.core import serializers
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login as login_user
 from django.contrib.auth import logout as logout_user
 from django.contrib.auth import authenticate
@@ -54,6 +55,7 @@ def inscritosJson(request):
 	data =  serializers.serialize("json", Inscricao.objects.all())
 	return HttpResponse(data, content_type='application/json')
 
+@login_required
 def inscritos(request):
 	return render(request, 'interpet/inscritos.html')
 
