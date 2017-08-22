@@ -9,8 +9,8 @@
 	<div class="row title page-header">
 		<h2 class="form-title">Formulário de Inscrição (ouvinte)</h2>
 		<small>
-			Petiano?
-			<a href="/interpet/inscricao">
+			Deseja participar como ouvinte?
+			<a href="/interpet/inscricao-ouvinte">
 				Inscreva-se aqui
 			</a>
 		</small>
@@ -20,28 +20,71 @@
 		{% csrf_token %}
 		<div class="col-md-6">
 			<div class="form-group">
-				<label class="control-label">Nome</label>
+				<label class="control-label">Nome Completo (sem abreviação)</label>
 				<input class="form-control" type="text" name="Q1" required>
 			</div>
 			<div class="form-group">
-				<label class="control-label">Situação acadêmica</label>
+				<label class="control-label">Sexo</label>
 				<div class="radio">
-	  				<label><input type="radio" value="Professor" name="Q21">Professor</label>
+	  				<label><input type="radio" name="Q2"  value="Feminino" required>Feminino</label>
 				</div>
 				<div class="radio">
-	  				<label><input type="radio" value="Aluno" name="Q21">Aluno</label>
-				</div>
-				<div class="radio">
-	  				<label><input type="radio" value="Outra" name="Q21">Outra</label>
+	  				<label><input type="radio" name="Q2" value="Masculino">Masculino</label>
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="control-label">Curso que atua</label>
-				<input class="form-control" type="text" name="Q22">
+				<label class="control-label">CPF (sem pontuação)</label>
+				<input class="form-control" type="text" name="Q3" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Telefone (sem pontuação)</label>
+				<input class="form-control" type="text" name="Q4" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
+			</div>
+			<div class="form-group">
+				<label class="control-label">E-mail</label>
+				<input class="form-control" type="email" name="Q5" style="width:350px;" required>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Número de Matrícula</label>
+				<input class="form-control" type="text" name="Q6" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
 			</div>
 			<div class="form-group">
 				<label class="control-label">Instituição de origem</label>
-				<input class="form-control" type="text" name="Q23">
+				<input class="form-control" type="text" name="Q8" required>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Curso</label>
+				<input class="form-control" type="text" name="Q9" required>
+			</div>
+			<div class="form-group">
+				<h2>Informações complementares</h2>
+				<p>O CEFET - Leopoldina oferecerá aos participantes do InterPET alojamento em suas salas assim como opção de almoço na cantina da própria instituição, com valor simbólico custeado pelo participante.Para oferecermos aos participantes uma infraestrutura adequada e de qualidade, zemos essa seção para sabermos mais sobre nossos futuros visitantes. Responda as questões abaixo de acordo com a opção que atenderá sua necessidade.</p>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Estadia</label>
+				<div class="radio">
+					<label><input type="radio" name="Q10" value="Alojamento" required>Alojamento (CEFET-Leopoldina)</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="Q10" value="Hotel">Hotel (por conta do participante)</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Almoço</label>
+				<div class="radio">
+					<label><input type="radio" name="Q11" value="Cantina">Cantina CEFET-Leopoldina (por conta do participante)</label>
+				</div>
+				<div class="radio">
+					<label><input type="radio" name="Q11" value="Restaurante">Restaurantes fora do campus (por conta do participante)</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<h2>Considerações finais</h2>
+				<p>Para seu maior conforto, aqui estão algumas informações que podem ser de grande ajuda durante nosso evento:</p>
+				<p>1. Dados de restaurantes, hotéis, bares estão presentes nesse link: <a href="https://www.facebook.com/events/798549746991869/?fref=ts" target="_blank">https://www.facebook.com/events/798549746991869/?fref=ts</a></p>
+				<p>2. Existe um aplicativo mobile chamado Bigou que permite conferir bares, restaurantes,lanchonetes e farmácias de plantão em funcionamento durante os dias de evento.</p>
+				<p>3. O mapa da Unidade Leopoldina está presente aqui: <a href="http://www.leopoldina.cefetmg.br/mapa-da-unidade/" target="_blank">Mapa</a></p>
+				<p>4. É importante que os participantes que optarem pelo alojamento tragam material para dormir e higiene, estes NÃO sendo disponibilizados pela insituição</p>
 			</div>
 			<input type="hidden" name="ouvinte" value="True">
 			<div class="form-group">
@@ -50,4 +93,4 @@
 		</div>
 	</form>	
 </div>
-{% endblock content %}
+{% endblock %}
