@@ -25,7 +25,7 @@ SECRET_KEY = '2i+3b0(b=vv$s))je6qb179z%rem4hj1$5oe)uo&$oqj$im9rt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'pet', 'localhost']
+ALLOWED_HOSTS = ['localhost', 'pet.cefetmg.br']
 
 
 # Application definition
