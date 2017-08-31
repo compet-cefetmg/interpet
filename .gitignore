@@ -1,0 +1,5 @@
+blog/__pycache__/
+*.pyc
+staticroot/
+interpet/migrations/
+db.sqlite3
