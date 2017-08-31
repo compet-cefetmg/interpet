@@ -22,17 +22,21 @@ def inscricao(request):
 		inscricao.Q4 = request.POST.get('Q4')
 		inscricao.Q5 = request.POST.get('Q5')
 		inscricao.Q6 = request.POST.get('Q6')
-		inscricao.Q10 = request.POST.get('Q10')
 		inscricao.Q11 = request.POST.get('Q11')
+		inscricao.Q12 = request.POST.get('Q12')
 		
 		if request.POST.get('ouvinte'):
 			inscricao.ouvinte = request.POST.get('ouvinte')
-			inscricao.Q7 = "Ouvinte"
-			inscricao.Q8 = request.POST.get('Q8')
+			inscricao.Q7 = request.POST.get('Q7')
+			inscricao.Q8 = "Ouvinte"
 			inscricao.Q9 = request.POST.get('Q9')
+			inscricao.Q10 = request.POST.get('Q10')
 		
 		else:
-			inscricao.Q7 = request.POST.get('Q7')
+			inscricao.Q7 = "nao"
+			inscricao.Q8 = request.POST.get('Q8').split('-')[1]
+			inscricao.Q9 = "CEFET - "+request.POST.get('Q8').split('-')[0]
+			inscricao.unidade = request.POST.get('Q8').split('-')[0]
 		
 		inscricao.save()
 

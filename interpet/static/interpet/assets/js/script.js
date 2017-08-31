@@ -14,7 +14,7 @@ day1 = [
 	{
 		'start' : '9:30',
 		'end' : '12:00',
-		'description' : 'Mesa de abertura: PET: conectando saberes, conectando pessoas <br><br> <b>Deise Luiza da Silva Ferraz</b> (Professora Adjunta e Tutora no Programa de Educação Tutorial na Faculdade de Ciências Econômicas da UFMG) <br><br> <b>Fabíola de Sampaio Rodrigues Grazinoli Garrido</b> (Professora Associada de Química e Bioquímica da UFRRJ e Tutora do Programa de Educação Tutorial Conexões de Saberes no Instituto Três Rios)',
+		'description' : 'Mesa de abertura: PET: conectando saberes, conectando pessoas <br><br> <b>Fabíola de Sampaio Rodrigues Grazinoli Garrido</b> (Professora Associada de Química e Bioquímica da UFRRJ e Tutora do Programa de Educação Tutorial Conexões de Saberes no Instituto Três Rios desde 2010) <br><br> <b>Eugênia Cristina Muller Giancoli Jabour</b> (Professora de Ensino Básico Técnico e Tecnológico do IFSUDESTEMG e Tutora do Programa de Educação Tutorial do Curso de Eng. Mecatrônica e Sistemas de Informação no Campus Juiz de Fora desde 2010)',
 		'place' : 'Campus Leopoldina - Auditório'
 	},
 	{

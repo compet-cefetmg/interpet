@@ -25,19 +25,19 @@ function format ( d ) {
             '</tr>'+
             '<tr>'+
                 '<th>Instituição de origem</th>'+
-                '<td>' + (d.fields.Q8 != null ? d.fields.Q8 : "") + '</td>'+
-            '</tr>'+
-            '<tr>'+
-                '<th>Curso</th>'+
                 '<td>' + (d.fields.Q9 != null ? d.fields.Q9 : "") + '</td>'+
             '</tr>'+
             '<tr>'+
-                '<th>Estadia</th>'+
+                '<th>Curso</th>'+
                 '<td>' + (d.fields.Q10 != null ? d.fields.Q10 : "") + '</td>'+
             '</tr>'+
             '<tr>'+
-                '<th>Alimentação</th>'+
+                '<th>Estadia</th>'+
                 '<td>' + (d.fields.Q11 != null ? d.fields.Q11 : "") + '</td>'+
+            '</tr>'+
+            '<tr>'+
+                '<th>Alimentação</th>'+
+                '<td>' + (d.fields.Q12 != null ? d.fields.Q12 : "") + '</td>'+
             '</tr>'+
         '</table>';
     }
@@ -53,6 +53,10 @@ function format ( d ) {
                 '<td>'+ (d.fields.Q3 != null ? d.fields.Q3 : "") +'</td>'+
             '</tr>'+
             '<tr>'+
+                '<th>Unidade</th>'+
+                '<td>' + (d.fields.unidade != null ? d.fields.unidade : "") + '</td>'+
+            '</tr>'+
+            '<tr>'+
                 '<th>Telefone</th>'+
                 '<td>'+ (d.fields.Q4 != null ?  d.fields.Q4 : "") + '</td>'+
             '</tr>'+
@@ -66,11 +70,11 @@ function format ( d ) {
             '</tr>'+
             '<tr>'+
                 '<th>Estadia</th>'+
-                '<td>' + (d.fields.Q10 != null ? d.fields.Q10 : "") + '</td>'+
+                '<td>' + (d.fields.Q11 != null ? d.fields.Q11 : "") + '</td>'+
             '</tr>'+
             '<tr>'+
                 '<th>Alimentação</th>'+
-                '<td>' + (d.fields.Q11 != null ? d.fields.Q11 : "") + '</td>'+
+                '<td>' + (d.fields.Q12 != null ? d.fields.Q12 : "") + '</td>'+
             '</tr>'+
         '</table>';
     '</table>';
@@ -92,7 +96,7 @@ $(document).ready(function() {
                 "defaultContent": ''
             },
             { "data": "fields.Q1" },
-            { "data": "fields.Q7" },
+            { "data": "fields.Q8" },
         ],
         "order": [[1, 'asc']]
     } );
