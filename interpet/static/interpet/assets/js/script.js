@@ -2,13 +2,13 @@ day1 = [
 	{
 		'start' : '8:00',
 		'end' : '9:00',
-		'description' : 'Credenciamento <br> Abertura: Diretoria Geral e Diretoria de Graduação',
+		'description' : 'Credenciamento <br> COFFEE BREAK',
 		'place' : 'Campus Leopoldina - Auditório'
 	},
 	{
 		'start' : '9:00',
 		'end' : '9:30',
-		'description' : 'COFFEE BREAK',
+		'description' : 'Abertura: Diretoria Geral e Diretoria de Graduação',
 		'place' : 'Campus Leopoldina - Auditório'
 	},
 	{
@@ -38,14 +38,14 @@ day1 = [
 	{
 		'start' : '16:30',
 		'end' : '18:00',
-		'description' : 'Relatos de experiência dos Grupos PET CEFET-MG: tutores e discentes',
+		'description' : 'Relatos de experiência dos Grupos PET CEFET-MG: tutores e discentes <br> Desdobramentos do PET no mundo do trabalho: relatos de ex-alunos petianos',
 		'place' : 'Campus Leopoldina - Auditório'
-	},
+	}
 ]
 
 day2 = [
 	{
-		'start' : '8:30',
+		'start' : '9:00',
 		'end' : '10:00',
 		'description' : 'Mesa: O PET CEFET MG em evidência: uma avaliação pelo CLAA <br><br><b>Igor Mota Morici</b> (Presidente do Comitê Local de Acompanhamento e Avaliação – CLAA – do PET e Professor do Departamento de Ciências Sociais e Filosofia - CEFET-MG)',
 		'place' : 'Campus Leopoldina - Auditório'
@@ -70,27 +70,21 @@ day2 = [
 	},
 	{
 		'start' : '12:00',
-		'end' : '14:00',
+		'end' : '13:00',
 		'description' : 'Intervalo - Almoço',
 		'place' : ''
 	},
 	{
-		'start' : '14:00',
-		'end' : '15:30',
-		'description' : 'Desdobramentos do PET no mundo do trabalho: relatos de ex-alunos petianos',
-		'place' : 'Campus Leopoldina - Auditório'
-	},
-	{
-		'start' : '15:30',
-		'end' : '16:00',
-		'description' : 'COFFEE BREAK',
-		'place' : ''
-	},
-	{
-		'start' : '16:00',
-		'end' : '17:30',
+		'start' : '13:00',
+		'end' : '14:00',
 		'description' : 'Encerramento: Revisão do documento produzido no I InterPET em 2016: avanços e desafios do PET no CEFET MG para os próximos anos',
 		'place' : 'Campus Leopoldina - Auditório'
+	},
+	{
+		'start' : '14:00',
+		'end' : '14:30',
+		'description' : 'COFFEE BREAK',
+		'place' : ''
 	}
 ]
 
