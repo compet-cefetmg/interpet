@@ -1,0 +1,53 @@
+.sidebar {
+    margin-top: 40px;
+}
+
+.edit-btn,
+.remove-btn {
+    float: right;
+    margin-left: 10px;
+
+}
+
+.remove-btn {
+    color: #c9302c;
+}
+
+.remove-btn:hover {
+    color: #a0232b;
+}
+
+.add-btn {
+  float: left;
+}
+
+@media(max-width:767px){
+    .remove-btn {
+        margin-top: 5px;
+    }
+}
+
+.glyphicon.glyphicon-ok-circle{
+	color: green;
+}
+
+.glyphicon.glyphicon-ban-circle{
+	color: orange;
+}
+
+.glyphicon.glyphicon-trash{
+	color: red;
+}
+
+td{
+	overflow-wrap: break-word;
+}
+
+th#options{
+	text-align: center;
+}
+
+table#autorized_and_not_autorized{
+	width: 100%;
+	table-layout:fixed;
+}

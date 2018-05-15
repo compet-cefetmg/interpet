@@ -1,0 +1,65 @@
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>{%block title%}PET CEFET-MG{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%block icon%}
+        <link rel="icon" href="{{ STATIC_URL }}/media/favicon.ico">
+    {%endblock%}
+
+    {%block links%}
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+        <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
+        <lsink rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
+        <link rel="stylesheet" href="{{STATIC_URL}}js/fullcalendar/fullcalendar.min.css"></script>
+        <link rel="stylesheet" href="{{STATIC_URL}}js/fullcalendar/fullcalendar.css"></script>
+        <link rel="stylesheet" href="{{STATIC_URL}}js/fullcalendar/fullcalendar.print.min.css" media="print"/>
+
+    {%endblock%}
+
+    {%block js_includes%}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="{{ STATIC_URL }}/js/js/bootstrap.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/lisbs/sweetalert/1.1.3/sweetalert.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+        <script src="{{ STATIC_URL }}js/base.js"></script>
+
+        <script src="{{STATIC_URL}}js/fullcalendar/dep/moment.min.js"></script>
+        <script src="{{STATIC_URL}}js/fullcalendar/dep/jquery-ui.min.js"></script>
+        <script src="{{STATIC_URL}}js/fullcalendar/fullcalendar.js"></script>
+        <script src="{{STATIC_URL}}js/fullcalendar/locale-all.js"></script>
+        <script src="{{STATIC_URL}}js/fullcalendar/gcal.min.js"></script>
+        <script src="{{STATIC_URL}}js/fullcalendar/gcal.js"></script>
+    {%endblock%}
+
+    {%block css%}
+    {%endblock%}
+
+    {% block js %}
+    {% endblock %}
+</head>
+
+<body>
+    {%block wallpaper%}
+    <body id="bg" style='background-image: url("{{STATIC_URL}}media/clean_blur.png")';>
+    {% endblock %}
+    <div class="wrapper">
+    {%block navbar%}{%include "snippets/navbar.html"%}{%endblock%}
+    {%block messages%}{% include "snippets/messages.html"%}{%endblock%}
+    {%block navpills%}{%include "snippets/navpills.html"%}{%endblock%}
+
+    {% block content %}
+    {% endblock %}
+    </div>
+    <div class="push"></div>
+    {%block footer%}{%include "snippets/footer.html"%}{%endblock%}
+</body>
+</html>

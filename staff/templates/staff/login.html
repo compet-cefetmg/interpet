@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/form.css">
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Área de administração</h3>
+            <p>Nesta área, petianos podem adicionar e editar posts, e tutores podem adicionar e editar membros.</p>
+            <p>Se você é petiano e não possui acesso, entre em contato com o seu tutor.</p>
+            <p>Se você é o tutor de algum PET e não possui acesso, entre em contato com a Diretoria de Graduação.</p>
+            <hr>
+        </div>
+        <div class="col-sm-4 col-xs-8">
+            <form action="{% url 'staff.auth_login' %}?next={{ request.GET.next }}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <h4><strong>Usuário<strong></h4>
+                    {% if error %}
+                        <span class="error help-block">{{ error }}</span>
+                    {% endif %}
+                    {{ form.username }}
+                </div>
+                <div class="form-group">
+                    <h4><strong>Senha<strong></h4>
+                    {{ form.password }}
+                </div>
+                <button class="btn btn-primary">Entrar</button>
+            </form>
+        </div>
+    </div>
+    <div class="row forgot-password">
+        <div class="col-md-12">
+            <a href="{% url 'password_reset' %}">Esqueci minha senha!</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

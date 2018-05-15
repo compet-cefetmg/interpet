@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/members.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/form.css">
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 page-header">
+            <h2>Editar função de {{ request.resolver_match.kwargs.username }}</h2>
+        </div>
+        <div class="col-md-7">
+            {% include "messages.html" %}
+        </div>
+        <div class="col-md-7">
+            <form action="{{ request.path }}" method="post">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group {% if field.errors %}has-error{% endif %}">
+                        <h4><strong>{{ field.label }}</strong></h4>
+                        <span class="help-block">
+                            <p>Bolsistas, voluntários e colaboradores podem editar <strong>posts</strong>.</p>
+                            <p>Tutores podem editar <strong>posts</strong> e <strong>membros do PET</strong>.</p>
+                            <p>Ex-membros permanecem registrados, mas perdem o acesso à area de administração.</p>
+                        </span>
+                        {% if field.errors %}
+                            {% for error in field.errors %}
+                                <span class="help-block">{{ error }}</span>
+                            {% endfor %}
+                        {% endif %}
+                        {{ field }}
+                    </div>
+                {% endfor %}
+                <button class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
